@@ -102,59 +102,31 @@ features within the AI App Studio, aligning AI outputs with business workflows.`
 
   projects: [
     {
-      title: "E-Commerce Platform",
+      title: "Safe Report - Incident Reporting Platform",
       description:
-        "A full-featured e-commerce platform with payment integration, inventory management, and admin dashboard.",
-      image: "/projects/ecommerce.jpg",
-      technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe"],
+        "An online platform for annonymous crime reporting and community safety.",
+      image: "/safereport.png",
+      technologies: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL", "Nodejs"],
       github: "https://github.com/yourusername/ecommerce",
-      demo: "https://ecommerce-demo.com",
+      demo: "https://crime-report-js.vercel.app/",
       highlights: [
-        "Supports 10,000+ products",
-        "Real-time inventory updates",
-        "Secure payment processing",
+        "Annonymous incident reporting",
+        "Real-time status tracking",
+        "Emergency contact features",
       ],
     },
     {
-      title: "Task Management App",
+      title: "Trip Tailor",
       description:
-        "Collaborative task management application with real-time updates and team collaboration features.",
-      image: "/projects/taskapp.jpg",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
+        "AI powered travel itinerary planner that customizes trips based on user preferences.",
+      image: "/trip.png",
+      technologies: ["Nextjs", "Tailwind", "Node.js", "Express", "MongoDB", "Gemini API"],
       github: "https://github.com/yourusername/taskapp",
-      demo: "https://taskapp-demo.com",
+      demo: "https://trip-tailor-dev.vercel.app/",
       highlights: [
-        "Real-time collaboration",
-        "Drag-and-drop interface",
-        "Role-based access control",
-      ],
-    },
-    {
-      title: "AI Chat Assistant",
-      description:
-        "Intelligent chatbot powered by AI for customer support and engagement.",
-      image: "/projects/chatbot.jpg",
-      technologies: ["Python", "TensorFlow", "React", "FastAPI"],
-      github: "https://github.com/yourusername/chatbot",
-      demo: "https://chatbot-demo.com",
-      highlights: [
-        "Natural language processing",
-        "Multi-language support",
-        "Context-aware responses",
-      ],
-    },
-    {
-      title: "Portfolio CMS",
-      description:
-        "Content management system specifically designed for developers and designers to showcase their work.",
-      image: "/projects/cms.jpg",
-      technologies: ["Next.js", "Sanity.io", "Tailwind CSS"],
-      github: "https://github.com/yourusername/portfolio-cms",
-      demo: "https://portfolio-cms-demo.com",
-      highlights: [
-        "Drag-and-drop content builder",
-        "SEO optimized",
-        "Responsive templates",
+        "AI customized itineraries",
+        "Tailored recommendations",
+        "Estimated cost breakdowns",
       ],
     },
   ],
@@ -162,15 +134,15 @@ features within the AI App Studio, aligning AI outputs with business workflows.`
   skills: [
     {
       category: "Frontend",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "HTML/CSS"],
+      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Javascript", "HTML/CSS"],
     },
     {
       category: "Backend",
-      skills: ["Node.js", "Express", "Python", "GraphQL", "REST APIs", "PostgreSQL"],
+      skills: ["Node.js", "Express", "Python", "MongoDB", "REST APIs", "PostgreSQL"],
     },
     {
       category: "Tools & Others",
-      skills: ["Git", "Docker", "AWS", "CI/CD", "Jest", "Figma"],
+      skills: ["Git", "Docker", "AWS", "CI/CD", "Postman", "MCP"],
     },
   ],
 

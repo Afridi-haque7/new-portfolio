@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
+import Image from "next/image";
 
 interface GridComponentProps {
   className?: string;
@@ -51,16 +52,24 @@ const SocialsGrid = ({ content }: { content: any[] }) => {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-background/50 border border-border/30 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 group"
+              className="p-3 rounded-lg bg-background/50 border border-border/30 hover:border-primary/50 transition-all duration-300 group"
             >
-              <IconComponent className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              <IconComponent className="w-5 h-5 text-primary transition-colors" />
             </a>
           );
         })}
       </div>
 
       <div>
-        <Button variant="outline">Resume <ArrowDown/> </Button>
+        <a 
+          href="/resume.pdf" 
+          download="Resume.pdf"
+          className="inline-flex"
+        >
+          <Button variant="outline">
+            Resume <ArrowDown className="ml-2 w-4 h-4" />
+          </Button>
+        </a>
       </div>
     </div>
   );
@@ -152,28 +161,13 @@ const SkillsGrid = ({ content }: { content: any[] }) => {
 
 const PhotoGrid = ({ content }: { content: any }) => {
   return (
-    <div>
-        <PixelatedCanvas
-        src="https://assets.aceternity.com/manu-red.png"
-        width={350}
-        height={250}
-        cellSize={3}
-        dotScale={0.9}
-        shape="square"
-        backgroundColor="#000000"
-        dropoutStrength={0.4}
-        interactive
-        distortionStrength={3}
-        distortionRadius={80}
-        distortionMode="swirl"
-        followSpeed={0.2}
-        jitterStrength={4}
-        jitterSpeed={4}
-        sampleAverage
-        tintColor="#FFFFFF"
-        tintStrength={0.2}
-        className="rounded-xl border border-neutral-800 shadow-lg"
-      />
+    <div className="flex justify-center items-center h-full">
+        <Image
+        src="/photo.jpeg"
+        width={200}
+        height={100}
+        alt="Profile Photo"
+        />
     </div>
   );
 };

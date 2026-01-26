@@ -30,7 +30,7 @@ export const AboutSection = () => {
       const totalQuestions = data?.totalQuestions || 3821;
       const totalSolved = data?.totalSolved || 1068;
       const easySolved = data?.easySolved || 366;
-      const mediumSolved = data?.mediumSolved || 750;
+      const mediumSolved = data?.mediumSolved || 550;
       const hardSolved = data?.hardSolved || 182;
       const totalEasy = data?.totalEasy || 650;
       const totalMedium = data?.totalMedium || 1150;
@@ -63,13 +63,14 @@ export const AboutSection = () => {
       description: "We automatically save your files as you type.",
       href: "/",
       cta: "Learn more",
-      background: <img className="absolute -top-20 -right-20 opacity-60" />,
+      background: <img className="absolute -top-20 -right-20 opacity-100" />,
       className: "lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-2",
       GridComponent: (
         <GridComponent
           name="Summary"
           type="summary"
           content={portfolioData.about.description}
+          className=" w-full scale-95 border-none transition-all duration-300 ease-out group-hover:scale-100"
         />
       ),
     },
@@ -86,6 +87,7 @@ export const AboutSection = () => {
           name="Socials"
           type="socials"
           content={portfolioData.socials}
+          className=" w-full scale-95 border-none transition-all duration-300 ease-out group-hover:scale-100"
         />
       ),
     },
@@ -102,6 +104,7 @@ export const AboutSection = () => {
           name="Education"
           type="education"
           content={portfolioData.education}
+          className=" w-full scale-95 border-none transition-all duration-300 ease-out group-hover:scale-100"
         />
       ),
     },
@@ -113,7 +116,13 @@ export const AboutSection = () => {
       cta: "Learn more",
       background: <img className="absolute -top-20 -right-20 opacity-60" />,
       className: "lg:row-start-2 lg:row-end-4 lg:col-start-2 lg:col-end-3",
-      GridComponent: <GridComponent name="Photo" type="photo" content="" />,
+      GridComponent: (
+      <GridComponent 
+      name="Photo" 
+      type="photo" 
+      content=""
+      className=" w-full scale-95 border-none transition-all duration-300 ease-out group-hover:scale-100"
+      />),
     },
     {
       Icon: FileTextIcon,
@@ -128,6 +137,7 @@ export const AboutSection = () => {
           name="Experience"
           type="experience"
           content={portfolioData.experience}
+          className=" w-full scale-95 border-none transition-all duration-300 ease-out group-hover:scale-100"
         />
       ),
     },
@@ -144,6 +154,7 @@ export const AboutSection = () => {
           name="Skills"
           type="skills"
           content={portfolioData.skills}
+          className=" w-full scale-95 border-none transition-all duration-300 ease-out group-hover:scale-100"
         />
       ),
     },
@@ -160,6 +171,7 @@ export const AboutSection = () => {
           name="Leetcode"
           type="leetcode"
           content={leetcodeData}
+          className=" w-full scale-95 border-none transition-all duration-300 ease-out group-hover:scale-100"
         />
       ),
     },
