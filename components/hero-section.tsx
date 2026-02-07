@@ -12,8 +12,8 @@ export function HeroSection() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
-  const theme = useTheme();
-  const [particleColor, setParticleColor] = useState(theme.theme === "dark" ? "#FFFFFF" : "#000000");
+  const { theme } = useTheme();
+  const [particleColor, setParticleColor] = useState("#FFFFFF");
 
   const titles = [
     "Full Stack Developer",
@@ -23,7 +23,7 @@ export function HeroSection() {
   ];
 
   useEffect(() => {
-    setParticleColor(theme.theme === "dark" ? "#FFFFFF" : "#000000");
+    setParticleColor(theme === "dark" ? "#FFFFFF" : "#000000");
   }, [theme]);
 
   useEffect(() => {
@@ -66,8 +66,8 @@ export function HeroSection() {
         />
       </div>
     ),
-    [particleColor, theme.theme],
-  ); // Empty dependency array means this only renders once
+    [particleColor],
+  );
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

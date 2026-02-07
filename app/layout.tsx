@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Full Stack Developer",
+  title: "Afridi | Software Engineer",
   description: "Professional portfolio showcasing my work, skills, and experience as a full stack developer",
-  keywords: ["portfolio", "developer", "full stack", "web development", "react", "next.js"],
+  keywords: ["portfolio", "developer", "full stack", "software engineer", "react", "next.js"],
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange={false}
         >

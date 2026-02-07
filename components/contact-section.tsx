@@ -20,22 +20,43 @@ export function ContactSection() {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [successMessage, setSuccessMessage] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSuccessMessage("")
+    setErrorMessage("")
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-    // In a real application, you would send this data to your backend
-    console.log("Form submitted:", formData)
+      const data = await response.json()
 
-    // Reset form
-    setFormData({ name: "", email: "", message: "" })
-    setIsSubmitting(false)
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message")
+      }
 
-    alert("Thank you for your message! I'll get back to you soon.")
+      // Reset form on success
+      setFormData({ name: "", email: "", message: "" })
+      setSuccessMessage("Thank you for your message! I'll get back to you soon.")
+
+      // Clear success message after 5 seconds
+      setTimeout(() => setSuccessMessage(""), 5000)
+    } catch (error) {
+      const errorMsg = error instanceof Error ? error.message : "An error occurred while sending your message"
+      setErrorMessage(errorMsg)
+      console.error("Form submission error:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (
@@ -176,6 +197,18 @@ export function ContactSection() {
 
             {/* Contact Form */}
             <Card className="p-8 border-none shadow-xl">
+              {successMessage && (
+                <div className="mb-6 p-4 rounded-lg bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700">
+                  <p className="text-green-800 dark:text-green-200 font-medium">{successMessage}</p>
+                </div>
+              )}
+
+              {errorMessage && (
+                <div className="mb-6 p-4 rounded-lg bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700">
+                  <p className="text-red-800 dark:text-red-200 font-medium">{errorMessage}</p>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label

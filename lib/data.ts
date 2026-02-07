@@ -2,11 +2,11 @@ export const portfolioData = {
   personal: {
     name: "Afridi Haque",
     title: "Software Engineer",
-    email: "afridi.hq97@.com",
+    email: "afridi.hq97@gmail.com",
     phone: "+91 6294900841",
     location: "Kolkata, India",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    github: "https://github.com/yourusername",
+    linkedin: "https://www.linkedin.com/in/afridi-haque-851924203/",
+    github: "https://github.com/Afridi-haque7",
     website: "https://yourwebsite.com",
     bio: "Passionate developer with expertise in building scalable web applications. Focused on creating elegant solutions to complex problems.",
   },
@@ -107,7 +107,7 @@ features within the AI App Studio, aligning AI outputs with business workflows.`
         "An online platform for annonymous crime reporting and community safety.",
       image: "/safereport.png",
       technologies: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL", "Nodejs"],
-      github: "https://github.com/yourusername/ecommerce",
+      github: "https://github.com/Afridi-haque7/crime-report-js",
       demo: "https://crime-report-js.vercel.app/",
       highlights: [
         "Annonymous incident reporting",
@@ -121,7 +121,7 @@ features within the AI App Studio, aligning AI outputs with business workflows.`
         "AI powered travel itinerary planner that customizes trips based on user preferences.",
       image: "/trip.png",
       technologies: ["Nextjs", "Tailwind", "Node.js", "Express", "MongoDB", "Gemini API"],
-      github: "https://github.com/yourusername/taskapp",
+      github: "https://github.com/Afridi-haque7/ai-trip-planner",
       demo: "https://trip-tailor-dev.vercel.app/",
       highlights: [
         "AI customized itineraries",
@@ -149,7 +149,7 @@ features within the AI App Studio, aligning AI outputs with business workflows.`
   socials: [
     {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/yourprofile",
+        url: "https://www.linkedin.com/in/afridi-haque-851924203/",
         icon: "Linkedin"
     },
     {
