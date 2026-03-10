@@ -7,7 +7,7 @@ export const portfolioData = {
     location: "Kolkata, India",
     linkedin: "https://www.linkedin.com/in/afridi-haque-851924203/",
     github: "https://github.com/Afridi-haque7",
-    website: "https://yourwebsite.com",
+    website: "https://afridih.in",
     bio: "Passionate developer with expertise in building scalable web applications. Focused on creating elegant solutions to complex problems.",
   },
 
@@ -122,7 +122,7 @@ features within the AI App Studio, aligning AI outputs with business workflows.`
       image: "/trip.png",
       technologies: ["Nextjs", "Tailwind", "Node.js", "Express", "MongoDB", "Gemini API"],
       github: "https://github.com/Afridi-haque7/ai-trip-planner",
-      demo: "https://trip-tailor-dev.vercel.app/",
+      demo: "https://triptailor.org",
       highlights: [
         "AI customized itineraries",
         "Tailored recommendations",
